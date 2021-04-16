@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+<div class="container">
+    <h1 class="studhead">Student Register Here!!!</h1>
+    <div class="box1"></div>
+    <div class="box2">
+        <form action="{%url 'signup' %}" method="post">
+            {%csrf_token%}
+        <div class="mb-3">
+        <label for="">Name</label>
+        <input type="text" name="name" class="form-control">
+        </div>
+         <div class="mb-3">
+        <label for="">Email</label>
+        <input type="email" name="email" class="form-control">
+        </div>
+         <div class="mb-3">
+        <label for="">Cource</label>
+        <input type="text" name="crse" class="form-control">
+        </div>
+            <input type="submit">
+        </form>
+
+
+
+    </div>
+    <div class="box3"></div>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>
