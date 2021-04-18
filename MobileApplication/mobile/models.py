@@ -18,4 +18,4 @@ class Mobile(models.Model):
 
 
     def __str__(self):
-        return self.model_name
+        return self.mobile_name

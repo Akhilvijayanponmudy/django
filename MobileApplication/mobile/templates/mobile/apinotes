@@ -1,0 +1,18 @@
+#mobile/brands
+   #get=>list all brands
+   #post=>create a new brand
+
+#mobile/brands/edit/1
+   #get=>fetch that curresponding brand
+   #post=>update that brand
+
+#mobile/brand/delete/1
+   #post=>delete brand with id
+
+
+=================mobile==================
+
+
+#mobile/mobiles
+   #get=>list all mobiles
+   #post=>create new mobile

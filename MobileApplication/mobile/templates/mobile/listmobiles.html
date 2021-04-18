@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+
+
+{%block body_block%}
+<div class="row">
+    <div class="col-4">
+        {%for mobile in mobiles%}
+            <div class="card" style="width: 18rem;">
+  <img src="{{mobile.img.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{mobile.mobile_name}}</h5>
+    <p class="card-text">Price:{{mobile.price}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+        {% endfor%}
+    </div>
+
+</div>
+
+
+{% endblock %}
