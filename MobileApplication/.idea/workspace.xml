@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a085b2a-d943-4b90-9a9c-99df54ae3f6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BillingProject/.idea/BillingProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProductProject/.idea/ProductProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../akhil2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mobile/.idea/mobile.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProject/book/templates/book/bookcreate.html" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProject/book/templates/book/bookcreate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProject/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProject/book/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProject/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProject/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BookProject/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../BookProject/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MobileApplication/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MobileApplication/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/templates/mobile/apinotes" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/templates/mobile/apinotes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/templates/mobile/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/templates/mobile/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/templates/mobile/listmobiles.html" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/templates/mobile/listmobiles.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mobile/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../akhil2/book/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../akhil2/book/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../akhil2/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../akhil2/book/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mobile/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BookProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BillingProject" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">

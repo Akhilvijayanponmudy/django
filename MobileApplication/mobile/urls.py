@@ -16,11 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.shortcuts import render
-from .views import brand_view,create_mobile,list_mobiles
+from .views import brand_view,create_mobile,list_mobiles,mobile_detail,user_registration,user_login,user_logout,\
+order,errorpg,cart_view
 
 urlpatterns = [
     path("",lambda request:render(request,"mobile/index.html")),
     path("brands",brand_view,name="brandview"),
     path("mobiles",create_mobile,name="createmobile"),
-    path("mobiles/list",list_mobiles,name="listmobiles")
+    path("mobiles/list",list_mobiles,name="listmobiles"),
+    path("mobiles/detail/<int:id>",mobile_detail,name="detail"),
+    path("mobiles/userRegistration",user_registration,name="register"),
+    path("mobile/userlogin",user_login,name="userlogin"),
+    path("mobile/userlogout",user_logout,name="userlogout"),
+    path("mobile/order/<int:id>",order,name="userorder"),
+    path("error",errorpg,name="errorpage"),
+    path("mobile/cartview",cart_view,name="cart")
+
+
 ]

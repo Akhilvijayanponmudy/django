@@ -8,6 +8,8 @@ from .forms import UserRegForm,LoginForm
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
 
+from django.views.generic import ListView,CreateView,UpdateView,DetailView,DeleteView,TemplateView
+from django.urls import reverse_lazy
 
 def book_create(request):
     form=BookCreateForm()
@@ -39,16 +41,19 @@ def book_create(request):
 
     return render(request,"book/bookcreate.html",context)
 
+
 def book_delete(request,id):
     book=Book.objects.get(id=id)
     book.delete()
     return redirect("create")
+
 
 def book_view(request,id):
     book=Book.objects.get(id=id)
     context={}
     context["book"]=book
     return render(request,"book/bookdetail.html",context)
+
 
 def book_update(request,pk):
     book=Book.objects.get(id=pk)
@@ -62,6 +67,7 @@ def book_update(request,pk):
             return redirect("create")
 
     return render(request,"book/bookedit.html",context)
+
 
 def registration(request):
     form=UserRegForm()
@@ -105,7 +111,75 @@ def login_view(request):
 
 
 
+class Books(TemplateView):
+    model = Book
+    #context_object_name = "books"
+    template_name = "book/bookcreate.html"
+    context={}
+    def get(self, request, *args, **kwargs):
+        books=self.model.objects.all()
+        self.context["books"]=books
+        return render(request,self.template_name,self.context)
+
+
+class BookCreate(TemplateView):
+    model = Book
+    form_class = BookCreateForm
+    template_name = "book/bookcreate.html"
+    context={}
+    def get(self, request, *args, **kwargs):
+        self.context["form"]=self.form_class()
+        return render(request,self.template_name,self.context)
+
+    def post(self,request,*args,**kwargs):
+        form=self.form_class(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("clslist")
+        else:
+            self.context["form"]=form
+            return render(request,self.template_name,self.context)
 
 
 
+class BookUpdateView(TemplateView):
+    model = Book
+    form_class = BookCreateForm
+    template_name = "book/bookedit.html"
+    context={}
+    def get_object(self,id):
+        return self.model.objects.get(id=id)
+    def get(self, request, *args, **kwargs):
+        book=self.get_object(kwargs["pk"])
+        form=self.form_class(instance=book)
+        self.context["form"]=form
+        return render(request,self.template_name,self.context)
 
+    def post(self,request,*args,**kwargs):
+        book=self.get_object(kwargs["pk"])
+        form=self.form_class(request.POST,instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect("clslist")
+        else:
+            self.context["form"]=form
+            return render(request,self.template_name,self.context)
+
+
+class BookDetail(TemplateView):
+    model = Book
+    template_name = "book/bookdetail.html"
+    context={}
+    def get(self, request, *args, **kwargs):
+        book=self.model.objects.get(id=kwargs["pk"])
+        self.context["book"]=book
+        return render(request,self.template_name,self.context)
+
+
+class BookDelete(TemplateView):
+    model = Book
+
+    def get(self, request, *args, **kwargs):
+        book=self.model.objects.get(id=kwargs["pk"])
+        book.delete()
+        return redirect("clslist")

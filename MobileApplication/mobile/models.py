@@ -19,3 +19,16 @@ class Mobile(models.Model):
 
     def __str__(self):
         return self.mobile_name
+
+
+class Orders(models.Model):
+    product=models.ForeignKey(Mobile,on_delete=models.CASCADE)
+    address=models.CharField(max_length=200)
+    user=models.CharField(max_length=120)
+    choices=[
+        ("ordered","ordrerd"),
+        ("despatched","despatched"),
+        ("delivered","delivered"),
+        ("cancelled","cancelled")
+    ]
+    status=models.CharField(max_length=40,choices=choices,default="ordered")

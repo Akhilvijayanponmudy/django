@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+{%extends 'bill/base.html'%}
+
+
+{%block body_block%}
+
+<h1>Create Bill</h1>
+
+
+<form action="" method="post">
+    {%csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="add">
+
+
+</form>
+
+<div style="margin-left:70%">
+    <a href="{% url 'completeorder' bill_number%}" class="btn btn-success">Complete Order</a>
+</div>
+
+{% if total%}
+<h1>Total:{{total}}</h1>
+{% endif %}
+<table class="table">
+    <tr>
+        <td>Bill Number</td>
+        <td>Product Name</td>
+        <td>Quantity</td>
+        <td>Amount</td>
+    </tr>
+    {%for item in items%}
+    <tr>
+        <td>{{item.bill_number}}</td>
+        <td>{{item.product.product_name}}</td>
+        <td>{{item.product_qty}}</td>
+        <td>{{item.amount}}</td>
+
+
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

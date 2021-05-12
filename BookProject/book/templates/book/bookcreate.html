@@ -39,9 +39,9 @@
             <td>{{book.pages}}</td>
             <td>{{book.price}}</td>
             <td>{{book.category}}</td>
-            <td><a href="{% url 'delete' book.id %}">delete</a> </td>
-            <td> <a href="{%url 'detail' book.id %}">view</a> </td>
-            <td> <a href="{%url 'edit' book.pk%}">update</a> </td>
+            <td><a href="{% url 'clsbookdelete' book.id %}">delete</a> </td>
+            <td> <a href="{%url 'clsbookdetail' book.id %}">view</a> </td>
+            <td> <a href="{%url 'clsupdate' book.pk%}">update</a> </td>
 
         </tr>
         {% endfor %}

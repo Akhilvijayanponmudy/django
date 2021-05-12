@@ -16,3 +16,14 @@
 #mobile/mobiles
    #get=>list all mobiles
    #post=>create new mobile
+
+
+
+
+#mobile/mobile/detail/1
+
+
+
+#user authentication
+
+#mobile/userRegistration

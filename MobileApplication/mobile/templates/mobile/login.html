@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+
+
+{%block body_block%}
+<h1>Login Here!!!</h1>
+<div>
+    <form action="" method="post">
+        {%csrf_token%}
+    <input type="text" name="uname" placeholder="username">
+    <input type="text" name="pwd" placeholder="pwd">
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+
+{% endblock %}

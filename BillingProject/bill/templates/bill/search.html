@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{%extends 'bill/base.html'%}
+
+
+{%block body_block%}
+
+
+<form method="get">
+    {{filter.form.as_p}}
+    <input type="submit" value="search">
+</form>
+{%for order in filter.qs%}
+<div>
+    {{order.bill_number}}
+    {{order.customer_name}}
+    {{order.bill_date}}
+    {{order.bill_total}}
+</div>
+{% endfor %}
+
+
+{% endblock %}

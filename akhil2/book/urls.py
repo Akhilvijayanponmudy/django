@@ -19,5 +19,6 @@ from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create/',book_create,name="create")
+    path('create/',book_create,name="create"),
+    path("bookview")
 ]
